@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
 
+<!-- ============ منع الوضع الداكن ============ -->
+<meta name="color-scheme" content="light only">
+<style>
+  :root { color-scheme: light !important; }
+  /* منع أي تطبيق للون داكن من المتصفح */
+  html { background: #fdf6f4 !important; }
+  body { background: #fdf6f4 !important; }
+  /* منع تغيير ألوان المدخلات والأزرار */
+  input, textarea, button, select { color-scheme: light !important; }
+</style>
+
 <!-- ============ OPEN GRAPH META TAGS (لظهور الصورة عند مشاركة الرابط) ============ -->
 <meta property="og:title" content="Abdallah & Tabarak — Wedding Invitation">
 <meta property="og:description" content="You are cordially invited to celebrate the wedding of Abdallah & Tabarak at Axia Hall. Join us for an evening of love and celebration.">
@@ -23,12 +34,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
 <style>
+  /* ============ منع الوضع الداكن ============ */
+  :root { color-scheme: light !important; }
+  * { color-scheme: light !important; }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; background: #fdf6f4 !important; }
   html, body { overflow-x: hidden; width: 100%; }
   body {
     font-family: 'Inter', system-ui, sans-serif;
-    background: #fdf6f4;
+    background: #fdf6f4 !important;
     color: #3d2a2e;
     min-height: 100dvh;
     position: relative;
@@ -54,7 +69,7 @@
   .loader-screen {
     position: fixed; inset: 0; z-index: 200;
     display: flex; align-items: center; justify-content: center;
-    background: #fdf6f4;
+    background: #fdf6f4 !important;
     transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s;
   }
   .loader-screen.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
@@ -129,7 +144,7 @@
     position: relative;
     border: 2px solid rgba(201, 162, 107, 0.28);
     border-radius: 28px;
-    background: #fffafb;
+    background: #fffafb !important;
     box-shadow:
       0 25px 70px -25px rgba(201, 123, 138, 0.25),
       0 0 0 1px rgba(255,255,255,0.5) inset;
@@ -138,7 +153,7 @@
   .ornamental-frame::after {
     content: "✦ ✦ ✦";
     position: absolute; left: 50%; transform: translateX(-50%);
-    background: #fdf6f4; padding: 0 16px;
+    background: #fdf6f4 !important; padding: 0 16px;
     font-size: 11px; letter-spacing: 6px; color: #c9a26b; opacity: 0.6;
     white-space: nowrap;
   }
@@ -168,14 +183,14 @@
   .envelope-screen {
     position: fixed; inset: 0; z-index: 100;
     display: flex; align-items: center; justify-content: center;
-    background: #fdf6f4;
+    background: #fdf6f4 !important;
     transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.7s;
     padding: 1.25rem;
   }
   .envelope-screen.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
   .envelope-paper {
     width: 100%; max-width: 400px;
-    background: #fffafb;
+    background: #fffafb !important;
     border-radius: 22px 22px 12px 12px;
     box-shadow:
       0 40px 100px -30px rgba(60, 30, 40, 0.35),
@@ -197,7 +212,7 @@
   }
   .envelope-flap {
     position: absolute; top: -1px; left: 0; right: 0; height: 46px;
-    background: #fffafb;
+    background: #fffafb !important;
     border-radius: 22px 22px 0 0;
     box-shadow: 0 -4px 20px rgba(201, 162, 107, 0.1);
     border-bottom: 1px solid rgba(201, 162, 107, 0.18);
@@ -298,7 +313,7 @@
 
   /* ============ CARDS ============ */
   .luxury-card {
-    background: #fffafb;
+    background: #fffafb !important;
     border: 1px solid rgba(201, 162, 107, 0.32);
     border-radius: 18px;
     box-shadow:
